@@ -49,6 +49,7 @@ class eppInfoDomainRequest extends eppDomainRequest {
                 throw new eppException('Hosts parameter of inforequest can only be to be all, none, del or sub');
             }
         }
+        $this->domainobject->setAttribute('xmlns:domain','urn:ietf:params:xml:ns:domain-1.0');
         $this->domainobject->appendChild($dname);
         if (!is_null($domain->getAuthorisationCode()))
         {
